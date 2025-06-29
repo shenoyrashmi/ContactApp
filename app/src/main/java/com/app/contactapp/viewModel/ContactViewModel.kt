@@ -5,8 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
-import androidx.lifecycle.viewmodel.ViewModelFactoryDsl
-import com.app.contactapp.entities.Contact
+import com.app.contactapp.entity.Contact
 import com.app.contactapp.repository.ContactRepository
 import kotlinx.coroutines.launch
 

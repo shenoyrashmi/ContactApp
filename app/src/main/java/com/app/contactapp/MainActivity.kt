@@ -61,6 +61,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -68,7 +69,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.room.Room
 import coil.compose.rememberAsyncImagePainter
 import com.app.contactapp.db.ContactDatabase
-import com.app.contactapp.entities.Contact
+import com.app.contactapp.entity.Contact
 import com.app.contactapp.repository.ContactRepository
 import com.app.contactapp.ui.theme.RoyalBlue
 import com.app.contactapp.viewModel.ContactViewModel
@@ -88,6 +89,8 @@ class MainActivity : ComponentActivity() {
                 repository
             )
         }
+
+        installSplashScreen()
 
         setContent {
             val navController = rememberNavController()
@@ -275,6 +278,7 @@ fun ContactDetailScreen(
     }
 }
 
+@SuppressLint("SuspiciousIndentation")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun EditContactScreen(contact: Contact, viewModel: ContactViewModel, navController: NavController) {

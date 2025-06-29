@@ -1,7 +1,7 @@
 package com.app.contactapp.repository
 
 import com.app.contactapp.dao.ContactDao
-import com.app.contactapp.entities.Contact
+import com.app.contactapp.entity.Contact
 import kotlinx.coroutines.flow.Flow
 
 class ContactRepository(private val contactDao: ContactDao) {
